@@ -17,7 +17,7 @@ namespace DeltasBookStoreAppTest.Controllers
     public class BookDetailsControllerTest
     {
         [Fact]
-        public async Task GetAllBooks_ReturnOkStatus()
+        public void GetAllBooks_ReturnOkStatus()
         {
             ///Arrange
             var mockRepository = new Mock<IBookDetailsRepository>();
@@ -32,7 +32,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task GetBooks_ReturnOkStatus()
+        public void GetBooks_ReturnOkStatus()
         {
             ///Arrange
             var mockRepository = new Mock<IBookDetailsRepository>();
@@ -47,7 +47,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task GetBooks_ReturnNotFoundStatus()
+        public void GetBooks_ReturnNotFoundStatus()
         {
             ///Arrange
             var mockRepository = new Mock<IBookDetailsRepository>();
@@ -62,7 +62,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task GetDeletedBookDetails_ReturnOkStatus()
+        public void GetDeletedBookDetails_ReturnOkStatus()
         {
             ///Arrange
             var mockRepository = new Mock<IBookDetailsRepository>();
@@ -77,7 +77,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task PostBookDetails_ReturnActionResult()
+        public void PostBookDetails_ReturnActionResult()
         {
             BookDetails bookDetails = new BookDetails { Id = 4, AuthorName = "A", BookName = "B", BookDescription = "C", IsActive = "Y", Price = 100, PublisherName = "D", TotalCopiesSold = 200, PublishedDate = DateTime.Now.ToString() };
             ///Arrange
@@ -90,7 +90,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task PostBookDetails_ReturnProblem()
+        public void PostBookDetails_ReturnProblem()
         {
             BookDetails bookDetails = new BookDetails { Id = 4, AuthorName = "A", BookName = "B", BookDescription = "C", IsActive = "Y", Price = 100, PublisherName = "D", TotalCopiesSold = 200, PublishedDate = DateTime.Now.ToString() };
             ///Arrange
@@ -103,7 +103,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task PutBookDetails_ReturnOk()
+        public void PutBookDetails_ReturnOk()
         {
             BookDetails bookDetails = new BookDetails { Id = 4, AuthorName = "A", BookName = "B", BookDescription = "C", IsActive = "Y", Price = 100, PublisherName = "D", TotalCopiesSold = 200, PublishedDate = DateTime.Now.ToString() };
             ///Arrange
@@ -119,7 +119,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task PutBookDetails_ReturnBadRequest()
+        public void PutBookDetails_ReturnBadRequest()
         {
             BookDetails bookDetails = new BookDetails { Id = 4, AuthorName = "A", BookName = "B", BookDescription = "C", IsActive = "Y", Price = 100, PublisherName = "D", TotalCopiesSold = 200, PublishedDate = DateTime.Now.ToString() };
             ///Arrange
@@ -135,7 +135,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task PutBookDetails_ReturnNotFound()
+        public void PutBookDetails_ReturnNotFound()
         {
             BookDetails bookDetails = new BookDetails { Id = 4, AuthorName = "A", BookName = "B", BookDescription = "C", IsActive = "Y", Price = 100, PublisherName = "D", TotalCopiesSold = 200, PublishedDate = DateTime.Now.ToString() };
             ///Arrange
@@ -151,7 +151,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task DeleteBookDetails_ReturnOk()
+        public void DeleteBookDetails_ReturnOk()
         {
             BookDetails bookDetails = new BookDetails { Id = 4, AuthorName = "A", BookName = "B", BookDescription = "C", IsActive = "Y", Price = 100, PublisherName = "D", TotalCopiesSold = 200, PublishedDate = DateTime.Now.ToString() };
             ///Arrange
@@ -168,7 +168,7 @@ namespace DeltasBookStoreAppTest.Controllers
 
 
         [Fact]
-        public async Task DeleteBookDetails_ReturnProblem()
+        public void DeleteBookDetails_ReturnProblem()
         {
             BookDetails bookDetails = new BookDetails { Id = 4, AuthorName = "A", BookName = "B", BookDescription = "C", IsActive = "Y", Price = 100, PublisherName = "D", TotalCopiesSold = 200, PublishedDate = DateTime.Now.ToString() };
             ///Arrange
@@ -184,7 +184,7 @@ namespace DeltasBookStoreAppTest.Controllers
         }
 
         [Fact]
-        public async Task DeleteBookDetails_ReturnNotExist()
+        public void DeleteBookDetails_ReturnNotExist()
         {
             BookDetails bookDetails = new BookDetails { Id = 4, AuthorName = "A", BookName = "B", BookDescription = "C", IsActive = "Y", Price = 100, PublisherName = "D", TotalCopiesSold = 200, PublishedDate = DateTime.Now.ToString() };
             ///Arrange
